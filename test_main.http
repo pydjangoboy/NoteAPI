@@ -1,0 +1,46 @@
+# Test creating a note
+POST http://127.0.0.1:8000/notes/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 1,
+    "title": "Test Note",
+    "content": "This is a test note",
+    "created_at": "2023-01-01T00:00:00"
+}
+
+###
+
+# Test reading all notes
+GET http://127.0.0.1:8000/notes/
+Accept: application/json
+
+###
+
+# Test reading a specific note (replace {note_id} with the id of the note you want to read)
+GET http://127.0.0.1:8000/notes/1
+Accept: application/json
+
+###
+
+# Test updating a specific note (replace {note_id} with the id of the note you want to update)
+PUT http://127.0.0.1:8000/notes/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 1,
+    "title": "Updated Test Note",
+    "content": "This is an updated test note",
+    "created_at": "2023-01-01T00:00:00"
+}
+
+###
+
+# Test deleting a specific note (replace {note_id} with the id of the note you want to delete)
+DELETE http://127.0.0.1:8000/notes/{note_id}
+Accept: application/json
+```
+
+Please replace `{note_id}` with the actual id of the note you want to read, update, or delete.
