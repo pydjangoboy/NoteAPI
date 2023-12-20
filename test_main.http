@@ -42,5 +42,3 @@ Accept: application/json
 DELETE http://127.0.0.1:8000/notes/{note_id}
 Accept: application/json
 ```
-
-Please replace `{note_id}` with the actual id of the note you want to read, update, or delete.
